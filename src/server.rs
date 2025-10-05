@@ -5,6 +5,7 @@ use crate::commands::handle_command;
 
 pub fn start_server() {
     let listener = TcpListener::bind("127.0.0.1:6379").unwrap();
+    println!("server running on the port 6379");
 
     for stream in listener.incoming() {
         match stream {
